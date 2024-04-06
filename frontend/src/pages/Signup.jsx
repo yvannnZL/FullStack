@@ -4,36 +4,37 @@ import Navigation from "../components/Navigation";
 import { Footer } from '../components/Footer';
 import { Typography } from '@material-tailwind/react';
 import { PrimaryButton } from '../components/PrimaryButton';
+import { Link } from 'react-router-dom';
 
 
 export const Signup = () => {
   return (
     <div>
     <Navigation/>
-        <section class="bg-white">
-            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div class="w-full bg-gray-50 rounded-2xl md:mt-0 sm:max-w-2xl xl:p-10  ">
-                    <div class="font-montserrat p-6 space-y-4 md:space-y-6 sm:p-8">
-                        <h1 class="text-xl text-center leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
+        <section className="bg-white">
+            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+                <div className="w-full bg-gray-50 rounded-2xl md:mt-0 sm:max-w-2xl xl:p-10  ">
+                    <div className="font-montserrat p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <h1 className="text-xl text-center leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
                             Sign Up
                         </h1>
-                        <form class="font-normal space-y-4 md:space-y-6" action="#">
-                            <div class="grid grid-cols-2 gap-6">
-                                <div class="relative z-0 w-full group">
-                                    <label for="firstname" class="block mb-2 text-sm text-black ">First Name</label>
+                        <form className="font-normal space-y-4 md:space-y-6" action="#">
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="relative z-0 w-full group">
+                                    <label htmlFor="firstname" class="block mb-2 text-sm text-black ">First Name</label>
                                     <InputBox type="name" name="firstname" id="firstname" placeholder="First Name"/>
                                 </div>
-                                <div class="relative z-0 w-full group">
-                                    <label for="lastname" class="block mb-2 text-sm text-black ">Last Name</label>
+                                <div className="relative z-0 w-full group">
+                                    <label htmlFor="lastname" class="block mb-2 text-sm text-black ">Last Name</label>
                                     <InputBox type="name" name="lastname" id="lastname" placeholder="Last Name"/>
                                 </div>
                             </div>
                             <div>
-                                <label for="email" class="block mb-2 text-sm text-black ">Email</label>
+                                <label htmlFor="email" class="block mb-2 text-sm text-black ">Email</label>
                                 <InputBox type="email" name="email" id="email" placeholder="name@email.com"/>
                             </div>
                             <div>
-                                <label for="password" class="block mb-2 text-sm text-black">Password</label>
+                                <label htmlFor="password" class="block mb-2 text-sm text-black">Password</label>
                                 <InputBox type="password" name="password" id="password" placeholder="••••••••"/>
                                     <Typography
                                         className="mt-2 flex items-center mb-2 text-gray-400 text-xs gap-1 font-normal">
@@ -53,12 +54,12 @@ export const Signup = () => {
                                     </Typography>
                             </div>
                             <PrimaryButton className="w-full font-medium text-sm">Sign Up</PrimaryButton>
-                            <hr class="my-12 border-dotted border-t-1 bg-gray-500"/>
-                            <div class="flex items-center justify-between">
-                            <p class="text-sm font-light text-gray-400 mt-6">
+                            <hr className="my-12 border-dotted border-t-1 bg-gray-500"/>
+                            <div className="flex items-center justify-between">
+                            <p className="text-sm font-light text-gray-400 mt-6">
                                 Have an account? 
                             </p>
-                                <a href="#" class="text-sm text-green-50 hover:underline mt-6">Log in</a>
+                                <Link to="/login" className="text-sm text-green-50 hover:underline mt-6">Log in</Link>
                             </div>
                         </form>
                     </div>
