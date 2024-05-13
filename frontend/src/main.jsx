@@ -24,6 +24,7 @@ import Orders from "./pages/Customer/Orders";
 import Cart from "./pages/Customer/Cart";
 import AddressBook from "./pages/Customer/AddressBook";
 import Accounts from "./pages/Customer/Accounts";
+import OrderHistory from "./pages/Customer/OrderHistory";
 
 const router = createBrowserRouter([
   {
@@ -102,6 +103,11 @@ const router = createBrowserRouter([
   {
     path: "/customer/dashboard",
     element: <AddressBook />,
+    errorElement: <NotFound />
+  },
+  {
+    path: "/customer/ordershistory",
+    element: <OrderHistory />,
     errorElement: <NotFound />
   }
 ]);

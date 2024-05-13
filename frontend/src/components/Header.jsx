@@ -2,9 +2,9 @@ import Container from "./Containers/Container";
 import { SecondaryButton } from "./Buttons/SecondaryButton";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import React, { useState } from "react";
-import Chae from "./Images/Chae.jpg";
-import Best from "./Images/Best.jpg";
-import Sale from "./Images/Sale.jpg";
+import Chae from "./images/Chae.jpg";
+import Best from "./images/Best.jpg";
+import Sale from "./images/Sale.jpg";
 
 export const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
