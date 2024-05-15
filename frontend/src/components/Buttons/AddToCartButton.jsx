@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import AuthContext from "../../context/AuthContext";
 
-const AddToCartButton = ({ bookId, quantity }) => {
+const AddToCartButton = ({ bookId, quantity, toggleModal }) => {
   const { authTokens } = useContext(AuthContext);
+
   const addToCart = async () => {
     try {
       if (!authTokens) {
@@ -26,6 +27,8 @@ const AddToCartButton = ({ bookId, quantity }) => {
       );
       if (response.ok) {
         console.log("Item added to cart successfully!");
+        // Call toggleModal to display the modal
+        toggleModal();
       } else {
         console.error("Failed to add item to cart:", response.statusText);
       }
