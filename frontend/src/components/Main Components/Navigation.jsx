@@ -74,8 +74,12 @@ export default function Navigation() {
                       </>
                     ) : (
                       <>
-                        <NavLink to="/customer/register" text="Register" />
-                        <NavLink to="/customer/login" text="Login" />
+                        <p className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                          <NavLink to="/customer/register" text="Register" />
+                        </p>
+                        <p className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                          <NavLink to="/customer/login" text="Login" />
+                        </p>
                       </>
                     )}
                   </li>
